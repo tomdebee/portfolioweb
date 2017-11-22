@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="css/projects.css">
+
+
+
+<div id="projects" >
+	<div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall">
+		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'porcorosso.jpg' : 'thumb_porcorosso.jpg'}}"></img>
+		<span>Porco Rosso</span>
+	</div>
+	<div class="project">
+		<img ng-click="isBig= !isBig" ng-src="{{isBig ? 'img/projects/ssr2011.jpg' : 'img/projects/thumb_ssr2011.jpg'}}"></img>
+		<span>SSR EL CID 2011</span>
+	</div>
+	<div class="project">
+		<img ng-click="isBig= !isBig" ng-src="{{isBig ? 'img/projects/sportdag.jpg' : 'img/projects/thumb_sportdag.jpg'}}"></img>
+		<span>University Sports Day</span>
+	</div>
+	<div class="project">
+		<img ng-click="isBig= !isBig" ng-src="{{isBig ? 'img/projects/hollywood.jpg' : 'img/projects/thumb_hollywood.jpg'}}"></img>
+		<span>Hollywood Party</span>
+	</div>
+	
+	<div class="project" ng-controller="myZe">
+		<img ng-repeat="x in recs"  ng-src="img/projects/{{x}}"></img>
+	</div>
+</div>
+
+<script>
+
+app.controller("myZe", function($scope) {
+    $scope.recs = [
+        "porcorosso.jpg" ,
+		"porcorosso.jpg"
+    ]
+});
+</script>
