@@ -1,20 +1,14 @@
 .DS_Store
 Thumbs.db
 db.json
-*.log
-node_modules/
-public/
-.deploy*/
-*.iml
 .idea/
 .vscode/
-.classpath
-.project
+.classpath/
+.project/
 .settings/
-/target/classes
-/target/generated-sources
-/target/*.jar
-/out
-/target/
+target/
+out/
+bin/
 
-/bin/
+*.iml
+*.log
