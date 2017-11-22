@@ -2,14 +2,23 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script> 
+<script src="/js/app.js"></script>
 <link rel="stylesheet" href="css/styles.css">
 
 <title>Tomdebee</title>
 
-<body data-ng-app="myApp" >
+<body ng-app="flapperNews" ng-controller="MainCtrl" >
 
 <div class="header">
-	
+	<div id="test" >
+		<div>
+		  {{test}}
+		</div>
+	</div>
+
+
+
+
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
 </div>
@@ -24,7 +33,7 @@
 		</ul>
 	</div>
 	<div class="content" >
-		<div data-ng-include="'projects.html'">
+		<div ng-include="'projects.html'">
 		</div>
 	</div>
 </div>
@@ -47,7 +56,7 @@ var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
     $scope.records = [
         "Alfreds Futterkiste",
-        "Berglunds snabbköp",
+        "Berglunds snabbkï¿½p",
         "Centro comercial Moctezuma",
         "Ernst Handel",
     ]
