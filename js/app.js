@@ -7,3 +7,12 @@ app.controller('MainCtrl', [
     function($scope){
         $scope.test = 'Hello world!';
 }]);
+
+app.controller("myCtrl", function($scope) {
+    $scope.records = [
+        "Alfreds Futterkiste",
+        "Berglunds snabbköp",
+        "Centro comercial Moctezuma",
+        "Ernst Handel",
+    ]
+});

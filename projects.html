@@ -2,21 +2,26 @@
 
 
 
-<div id="projects" >
-	<div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall">
-		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'porcorosso.jpg' : 'thumb_porcorosso.jpg'}}"></img>
+<div id="projects" ng-controller="projectCtrl">
+	<!-- <div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall">
+		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'porcorosso.jpg' : 'thumb/porcorosso_thumb.jpg'}}"></img>
 		<span>Porco Rosso</span>
 	</div>
 	<div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall">
-		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'ssr2011.jpg' : 'thumb_ssr2011.jpg'}}"></img>
+		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'ssr2011.jpg' : 'thumb/ssr2011_thumb.jpg'}}"></img>
 		<span>SSR EL CID 2011</span>
 	</div>
 	<div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall">
-		<img ng-click="isBig= !isBig" ng-src="{{isBig ? 'img/projects/sportdag.jpg' : 'img/projects/thumb_sportdag.jpg'}}"></img>
+		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'sportdag.jpg' : 'thumb/sportdag_thumb.jpg'}}"></img>
 		<span>University Sports Day</span>
 	</div>
 	<div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall">
-		<img ng-click="isBig= !isBig" ng-src="{{isBig ? 'img/projects/hollywood.jpg' : 'img/projects/thumb_hollywood.jpg'}}"></img>
+		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'hollywood.jpg' : 'thumb/hollywood_thumb.jpg'}}"></img>
 		<span>Hollywood Party</span>
+	</div> -->
+	<span ng-repeat="x in projects">{{x}}</span>
+	<div class="project" ng-class="{'big':isSmall, 'small':!isSmall}" ng-click="isSmall = !isSmall" ng-repeat="x in projects">
+		<img ng-click="isBig= !isBig" ng-src="img/projects/{{isBig ? 'porcorosso.jpg' : 'thumb/porcorosso_thumb.jpg'}}"></img>
+		<span>{{x}}</span>
 	</div>
 </div>
