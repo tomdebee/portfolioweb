@@ -16,3 +16,12 @@ app.controller("myCtrl", function($scope) {
         "Ernst Handel",
     ]
 });
+
+app.controller("projectCtrl", function($scope) {
+    $scope.projects = [
+        "Porco Rosso",
+        "SSR 2011",
+        "Schoolfeest",
+        "Sportdag"
+    ]
+});
